@@ -19,7 +19,7 @@ def main(pageToken, loopCount):
     if response['error']:
         raise Exception('❌エラー：' + response['error']['message'])
     pageToken = response['nextPageToken']
-    count = response['pageInfo']['resultsPerPage']
+    count = len(response['items'])
     channelTitle = ""
     channelId = ""
     subscriberCount = ""
